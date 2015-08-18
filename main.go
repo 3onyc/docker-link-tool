@@ -26,11 +26,13 @@ func main() {
 	flag.Parse()
 
 	if *ClientIp == "" && *ClientName == "" {
-		fmt.Println("Need one of cname or cip")
+		fmt.Println("Erorr: need one of cname or cip")
+		flag.Usage()
 		return
 	}
 	if *ServerIp == "" && *ServerName == "" {
-		fmt.Println("Need one of sname or sip")
+		fmt.Println("Error: need one of sname or sip")
+		flag.Usage()
 		return
 	}
 
