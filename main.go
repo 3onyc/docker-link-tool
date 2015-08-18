@@ -11,12 +11,12 @@ import (
 )
 
 var (
-	DockerUrl  *string = flag.String("d", "unix:///var/run/docker.sock", "Docker URL")
+	DockerUrl  *string = flag.String("docker", "unix:///var/run/docker.sock", "Docker URL")
 	ClientIp   *string = flag.String("cip", "", "Client IP (Optional)")
 	ServerIp   *string = flag.String("sip", "", "Server IP (Optional)")
 	ClientName *string = flag.String("cname", "", "Client Name (Optional)")
 	ServerName *string = flag.String("sname", "", "Server Name (Optional)")
-	Port       *uint   = flag.Uint("p", 0, "Server port")
+	Port       *uint   = flag.Uint("port", 0, "Server port")
 	Action     *string = flag.String("action", "", "delete/add")
 
 	Docker *docker.Client

@@ -7,11 +7,11 @@ Tool for linking docker containers without using explicit links, primarily usefu
 ### Add rule allowing container foo to access port 80 on container bar
 
 ```bash
-link-tool -action add -cname foo -sname bar -p 80
+link-tool -action add -cname foo -sname bar -port 80
 ```
 
 ### Remove rule allowing foo to access port 80 on bar
 
 ```bash
-link-tool -action delete -cname foo -sname bar -p 80
+link-tool -action delete -cname foo -sname bar -port 80
 ```
